@@ -198,6 +198,19 @@ body {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
+.btn-secondary {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--bg-white);
+    border: 2px solid var(--bg-white);
+}
+
+.btn-secondary:hover {
+    background-color: var(--bg-white);
+    color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
 /* ==========================================================================
    About Section
    ========================================================================== */
@@ -696,7 +709,8 @@ body {
         height: 140px;
     }
 
-    .hero-links {
+    .hero-links,
+    .contact-links {
         flex-direction: column;
     }
 }
