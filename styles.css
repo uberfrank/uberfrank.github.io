@@ -3,14 +3,16 @@
    ========================================================================== */
 
 :root {
-    --primary-color: #0a66c2;
-    --secondary-color: #0077b5;
-    --accent-color: #00a0dc;
+    --primary-color: #2d7a4f;
+    --secondary-color: #1e5a3a;
+    --accent-color: #4caf50;
+    --light-green: #81c784;
+    --dark-green: #1b5e20;
     --text-color: #333;
     --text-light: #666;
-    --bg-light: #f8f9fa;
+    --bg-light: #f1f8f4;
     --bg-white: #ffffff;
-    --border-color: #e0e0e0;
+    --border-color: #d4e9dd;
     --shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     --shadow-lg: 0 4px 20px rgba(0, 0, 0, 0.12);
     --transition: all 0.3s ease;
@@ -128,15 +130,31 @@ body {
    ========================================================================== */
 
 .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #2d7a4f 0%, #1b5e20 100%);
     color: white;
     padding: 100px 0;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('./assets/images/geometric-bg.gif') center/cover;
+    opacity: 0.1;
+    z-index: 0;
 }
 
 .hero-content {
     max-width: 800px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
 .profile-img {
@@ -165,7 +183,14 @@ body {
 .location {
     font-size: 1.1rem;
     margin-bottom: 30px;
-    opacity: 0.9;
+    opacity: 1;
+    font-weight: 500;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.15);
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
 }
 
 .hero-links {
@@ -560,11 +585,151 @@ body {
 }
 
 /* ==========================================================================
+   Projects & Gallery Section
+   ========================================================================== */
+
+.projects-section {
+    background-color: var(--bg-light);
+}
+
+.section-intro {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--text-light);
+    max-width: 800px;
+    margin: -20px auto 50px;
+    line-height: 1.8;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.project-card {
+    background-color: var(--bg-white);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.project-image {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('./assets/images/geometric-bg.gif') center/cover;
+    opacity: 0.15;
+}
+
+.project-icon {
+    font-size: 4rem;
+    position: relative;
+    z-index: 1;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.project-content {
+    padding: 25px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-tag {
+    display: inline-block;
+    background-color: rgba(45, 122, 79, 0.1);
+    color: var(--primary-color);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    align-self: flex-start;
+}
+
+.project-card h3 {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    margin-bottom: 12px;
+}
+
+.project-card p {
+    color: var(--text-light);
+    line-height: 1.7;
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.project-tech span {
+    background-color: var(--bg-light);
+    color: var(--primary-color);
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid var(--border-color);
+}
+
+.projects-cta {
+    text-align: center;
+    padding: 50px 30px;
+    background: linear-gradient(135deg, rgba(45, 122, 79, 0.05) 0%, rgba(27, 94, 32, 0.05) 100%);
+    border-radius: 16px;
+    border: 2px solid var(--border-color);
+}
+
+.projects-cta h3 {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.projects-cta p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 25px;
+}
+
+.projects-cta .btn {
+    font-size: 1.1rem;
+    padding: 15px 40px;
+}
+
+/* ==========================================================================
    Contact Section
    ========================================================================== */
 
 .contact-section {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #2d7a4f 0%, #1b5e20 100%);
     color: white;
     text-align: center;
 }
