@@ -11,5 +11,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Print welcome message to console
     console.log('%c👋 Bienvenue!', 'font-size: 20px; color: #2d7a4f; font-weight: bold;');
-    console.log('%cFrançois Richard - Développeur de profession, prophète de cœur 💚', 'font-size: 14px; color: #666;');
+    console.log('%cFrançois Richard - Développeur · Visionnaire · Rassembleur', 'font-size: 14px; color: #666;');
 });
