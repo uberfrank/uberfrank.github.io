@@ -44,7 +44,7 @@ Pour visualiser le site localement :
 
 ## Contact
 
-- LinkedIn: [linkedin.com/in/frankyrichard](https://www.linkedin.com/in/frankyrichard)
+- LinkedIn: [linkedin.com/in/francoisrichard42](https://www.linkedin.com/in/francoisrichard42/)
 - Localisation: Montréal, Québec, Canada
 
 ## Licence
