@@ -237,6 +237,136 @@ body {
 }
 
 /* ==========================================================================
+   Content Pages (Biographie, Services)
+   ========================================================================== */
+
+.content-container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 40px 20px 30px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+    opacity: 0.9;
+    transition: var(--transition);
+    align-self: flex-start;
+}
+
+.back-link:hover {
+    opacity: 1;
+    transform: translateX(-3px);
+}
+
+.content-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.content-header .profile-img {
+    width: 96px;
+    height: 96px;
+    margin-bottom: 14px;
+}
+
+.content-title {
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.content-subtitle {
+    font-size: 1rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.content-card {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border-radius: 16px;
+    padding: 28px 30px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+}
+
+.content-card h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--dark-green);
+    margin-bottom: 12px;
+}
+
+.content-card p {
+    font-size: 0.98rem;
+    margin-bottom: 12px;
+}
+
+.content-card p:last-child {
+    margin-bottom: 0;
+}
+
+.content-card ul {
+    padding-left: 20px;
+    margin-bottom: 12px;
+}
+
+.content-card ul:last-child {
+    margin-bottom: 0;
+}
+
+.content-card li {
+    font-size: 0.98rem;
+    margin-bottom: 8px;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-bottom: 12px;
+}
+
+.pricing-card {
+    text-align: center;
+    padding: 18px 10px;
+    border-radius: 12px;
+    background: rgba(45, 122, 79, 0.08);
+    border: 1px solid rgba(45, 122, 79, 0.2);
+}
+
+.pricing-card .price {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--dark-green);
+    margin-bottom: 4px;
+}
+
+.pricing-card .price-label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--button-text);
+    opacity: 0.75;
+}
+
+.content-cta {
+    margin-top: 10px;
+}
+
+/* ==========================================================================
    Responsive Design
    ========================================================================== */
 
@@ -266,6 +396,14 @@ body {
     .social-icon {
         width: 44px;
         height: 44px;
+    }
+
+    .content-card {
+        padding: 22px 20px;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -326,6 +464,8 @@ body {
 
 .link-button:nth-child(1) { animation-delay: 0.1s; }
 .link-button:nth-child(2) { animation-delay: 0.2s; }
+.link-button:nth-child(3) { animation-delay: 0.3s; }
+.link-button:nth-child(4) { animation-delay: 0.4s; }
 
 .social-section {
     animation: fadeInUp 0.5s ease-out 0.4s both;
